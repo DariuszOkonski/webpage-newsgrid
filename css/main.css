@@ -11,7 +11,7 @@
 body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
-  min-height: 200vh;
+  min-height: 105vh;
 }
 
 img {
@@ -81,6 +81,10 @@ a {
 
 .btn-blue {
   background-color: #009cff;
+}
+
+.btn-dark {
+  background-color: #333;
 }
 
 .btn-red {
@@ -479,5 +483,81 @@ a {
     color: #c72727;
     cursor: pointer;
   }
+}
+
+.about {
+  background-color: #e3e3e3;
+}
+
+.about-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .about-container {
+    -ms-grid-columns: 3fr 1fr;
+        grid-template-columns: 3fr 1fr;
+  }
+}
+
+.about-container .left,
+.about-container .right {
+  padding: 1rem;
+}
+
+.about-container .left {
+  background-color: #fff;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / span 3;
+}
+
+.about-container .left__header {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.about-container .left__paragraph {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+@media (min-width: 1024px) {
+  .about-container .left__header {
+    font-size: 2rem;
+  }
+  .about-container .left__paragraph {
+    margin: 1rem 0;
+    line-height: 1.6;
+  }
+}
+
+.about-container .right {
+  background-color: #c72727;
+  color: #fff;
+}
+
+.about-container .right__header {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.about-container .right__paragraph {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+.about-container .right .btn {
+  display: block;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
